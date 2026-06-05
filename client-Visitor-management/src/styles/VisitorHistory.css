@@ -1,0 +1,195 @@
+/* Container */
+.visitor-history-container {
+    padding: 20px;
+    background-color: #f9fafb;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างตัวกรอง */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Select และ DatePicker ให้มีขนาดเท่ากัน */
+
+
+
+.react-datepicker__input-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.react-datepicker__input-container input:hover,
+.react-datepicker__input-container input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* DatePicker Popup */
+.react-datepicker__triangle {
+    display: none; /* ซ่อนลูกศรของ DatePicker */
+}
+
+.react-datepicker__header {
+    background-color: #3498db;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.react-datepicker__current-month {
+    font-weight: bold;
+}
+
+.react-datepicker__day {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.react-datepicker__day:hover {
+    background-color: #f0f0f0;
+}
+
+.react-datepicker__day--selected {
+    background-color: #3498db;
+    color: white;
+}
+
+.react-datepicker__navigation {
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Charts Section */
+.chart-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Table Section */
+.table-section {
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.MuiTable-root {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.MuiTableCell-root {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.MuiTableHead-root {
+    background-color: #f1f1f1;
+}
+
+.MuiTableBody-root {
+    font-size: 14px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* CSV Link */
+.csv-export-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.csv-export-link:hover {
+    color: #2980b9;
+}
+
+/* Customize TextField style */
+.MuiInputBase-root {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .filter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-select,
+    .react-datepicker-wrapper,
+    .date-picker-wrapper {
+        width: 100%;
+    }
+}
+.filter-section select,
+.filter-section input:not(.react-datepicker-ignore-onclickoutside) {
+    width: 160px; /* ปรับให้แคบลง */
+    height: 35px; /* ปรับความสูง */
+    font-size: 13px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* คงขนาดของ DatePicker เท่าเดิม */
+.react-datepicker-wrapper {
+    width: 200px;
+}
+
+/* ปรับให้ Select ของ Material UI มีขนาดเล็กลง */
+.MuiSelect-root,
+.MuiInputBase-root {
+    width: 165px !important;
+    height: 35px !important;
+    font-size: 13px !important;
+    padding: 2px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+}
+.export-section {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ด้านขวา */
+    margin-top: 10px;
+}
+
+.hidden-link {
+    display: none; /* ซ่อน CSVLink */
+}

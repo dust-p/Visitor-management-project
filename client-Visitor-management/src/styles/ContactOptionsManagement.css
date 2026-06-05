@@ -1,0 +1,393 @@
+/* Container */
+.contact-options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #f4f6f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.main-title {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Tabs */
+.tab-options {
+  display: flex;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-option {
+  padding: 15px 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab-option:hover {
+  color: #007bff;
+}
+
+.tab-option.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+
+/* Add Button */
+.add-button-container {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* List Section */
+.list-section {
+  width: 600px;
+  margin-bottom: 30px;
+}
+
+.list-title {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Buttons in List */
+.button-group button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}
+
+.button-group .edit-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.button-group .edit-button:hover {
+  background-color: #0056b3;
+}
+
+.button-group .delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-group .delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow: auto;
+}
+
+.modal-content1 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh; /* ให้ไม่เกินหน้าจอ */
+  overflow-y: auto; /* scroll เมื่อเนื้อหาเยอะ */
+  position: relative;
+}
+
+.modal-title {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.modal-body {
+  max-height: 60vh;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.modal-input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-start; /* จัดปุ่มไปทางซ้าย */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-footer button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #007bff; /* เปลี่ยนเป็นสีน้ำเงิน */
+  color: white;
+}
+.modal-footer button:hover {
+  background-color: #0056b3; /* สีน้ำเงินเข้มขึ้นเมื่อ Hover */
+}
+
+.modal-footer .cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-footer .cancel-button:hover {
+  background-color: #5a6268;
+}
+
+.modal-footer .confirm-button {
+  background-color: #007bff; /* เปลี่ยนสีปุ่ม "บันทึก" ให้ดูเด่นขึ้น */
+  color: white;
+}
+
+.modal-footer .confirm-button:hover {
+  background-color: #0056b3;
+}
+
+/* Close Button (กากบาท) */
+.close-button1 {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  color: #aaa;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* ปุ่ม "+ เพิ่ม Contact" และ "+ เพิ่ม Department" */
+.modal-body .add-button {
+  background-color: #007bff; /* เปลี่ยนเป็นสีน้ำเงิน */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.modal-body .add-button:hover {
+  background-color: #0056b3;
+}
+
+/* ปุ่ม "ลบ Department" และ "ลบ Contact" */
+.department-container .delete-button,
+.contact-item .delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.department-container .delete-button:hover,
+.contact-item .delete-button:hover {
+  background-color: #c82333;
+}
+
+
+/* ปรับขนาด Input ใน Modal เล็กน้อยเพื่อความสมดุล */
+.modal-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  box-sizing: border-box;
+}
+.delete-icon-button {
+  background: none; /* โปร่งใส */
+  border: 1px solid #007bff; /* กรอบสีน้ำเงิน */
+  border-radius: 4px; /* เพิ่มขอบมนเล็กน้อย */
+  cursor: pointer;
+  padding: 2px; /* เพิ่ม Padding เล็กน้อยให้ดูเป็นกรอบ */
+  margin-left: 10px; /* ระยะห่างจาก Input */
+  font-size: 0.8em; /* ปรับขนาด Icon */
+  outline: none; /* ลบเส้นขอบเมื่อ Focus */
+  display: flex; /* จัดให้ Icon อยู่ตรงกลาง */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* กำหนดขนาดความกว้าง */
+  height: 38px; /* กำหนดขนาดความสูง */
+}
+
+.delete-icon-button:hover {
+  border-color: #0056b3; /* สีน้ำเงินเข้มขึ้นเมื่อ Hover */
+}
+
+/* สไตล์สำหรับตัวถังขยะ (path ภายใน SVG) */
+.delete-icon-button svg path {
+  fill: #868e96; /* สีเทา */
+}
+
+.delete-icon-button:hover svg path {
+  fill: #6c757d; /* สีเทาเข้มขึ้นเมื่อ Hover */
+}
+
+/* ปรับ Layout ของ Department Header และ Contact Item */
+.department-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item .delete-icon-button {
+  margin-left: auto; /* ให้ปุ่มลบชิดขวาใน Contact Item */
+}
+
+.department-header .delete-icon-button {
+  margin-left: auto; /* ให้ปุ่มลบชิดขวาใน Department Header */
+}
+
+.form-group-vertical {
+  display: flex;
+  flex-direction: column; /* จัดให้ Label และ Input อยู่ในแนวตั้ง */
+  margin-bottom: 0.75rem; /* เพิ่มระยะห่างด้านล่างแต่ละกลุ่ม */
+}
+
+.input-label {
+  font-size: 0.8rem; /* ปรับขนาดตัวอักษร Label ให้เล็กลง */
+  color: #777; /* ปรับสี Label ให้ดูซอฟต์ลง (Option) */
+  margin-bottom: 0.25rem;
+}
+.input-with-delete {
+  display: flex;
+  align-items: center; /* จัดแนวตั้งตรงกลาง */
+  margin-bottom: 0.5rem;
+}
+
+.input-with-delete > .input-label {
+  font-size: 0.8rem;
+  color: #777;
+  margin-right: 0.5rem;
+  width: 80px;
+  /* ลองปรับ vertical-align */
+  /* vertical-align: middle; */ /* ลอง Uncomment บรรทัดนี้ */
+}
+
+.input-with-delete > input {
+  flex-grow: 1;
+}
+
+.input-with-delete > .delete-icon-button {
+  margin-left: 0.5rem;
+}
+
+/* ลองปรับ flex-basis เพื่อควบคุมขนาดเริ่มต้น */
+.input-with-delete > .input-label {
+  flex-basis: 80px; /* กำหนดขนาดเริ่มต้น */
+  flex-shrink: 0; /* ไม่ให้ย่อขนาดถ้าพื้นที่ไม่พอ */
+}
+
+.input-with-delete > input {
+  flex-basis: auto; /* ให้ Input ปรับขนาดอัตโนมัติ */
+}
+
+.input-with-delete > .delete-icon-button {
+  flex-basis: auto;
+}

@@ -1,0 +1,147 @@
+.content {
+    padding-top: 60px; /* ปรับให้มีระยะห่างจาก Navbar */
+}
+.role-text {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px; /* ระยะห่างจากปุ่ม logout */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db; /* สีพื้นหลังของ Navbar */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* เงาใต้ Navbar */
+    max-width: 100%; /* ทำให้ navbar ไม่เกินขนาดหน้าจอ */
+}
+
+.navbar-left {
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่างเมนู */
+}
+
+.navbar-left a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-left a:hover {
+    background-color: #2980b9; /* สีเมื่อเมาส์วาง */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center; /* ทำให้ข้อความ Role และปุ่ม logout อยู่ในแนวเดียวกัน */
+    justify-content: flex-end;
+}
+
+.logout-button {
+    background-color: #e7b93c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #e68d08; /* สีเมื่อเมาส์วาง */
+}
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.close-button:hover {
+  color: red;
+}
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  padding: 8px 14px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #eee;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.dropdown-menu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  gap: 10px;
+  font-size: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.dropdown-menu .btn-print {
+  color: #007BFF; /* ฟ้า */
+}
+
+.dropdown-menu .btn-logout {
+  color: #d58500; /* เหลือง/ส้ม */
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,282 @@
+/* Container */
+.visitor-register-container {
+    padding: 10px;
+    background-color: #f9fafb;
+}
+
+/* Titles and Subtitles (New Classes) */
+.visitor-register-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+}
+
+.visitor-register-subtitle {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.5em;
+}
+
+
+/* ปุ่มที่สลับระหว่างส่วน */
+.visitor-register-button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%; /* เพิ่มความกว้างเต็มพื้นที่ */
+    justify-content: center; /* ให้ปุ่มอยู่ตรงกลาง */
+}
+
+.visitor-register-button {
+    width: 200px; /* กำหนดความกว้างของปุ่ม */
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center; /* ทำให้ข้อความในปุ่มอยู่กลาง */
+    transition: background-color 0.3s ease; /* เพิ่ม transition */
+}
+
+.visitor-register-button:hover {
+    background-color: #2980b9;
+}
+
+/* ฟอร์มการลงทะเบียน */
+.visitor-register-form {
+    display: flex;
+    flex-direction: column; /* ให้ฟอร์มเรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่างช่องกรอก */
+    align-items: center; /* จัดกลางฟอร์ม */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+}
+
+/* ปรับ Label */
+.visitor-register-form label {
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    max-width: 400px;
+    text-align: left; /* ให้ข้อความอยู่ทางซ้าย */
+}
+
+/* ปรับช่องกรอกข้อมูล และช่องค้นหา */
+.visitor-register-form input,
+.visitor-register-form select,
+.visitor-register-form textarea,
+.search-input { /* เพิ่ม .search-input ตรงนี้ */
+    width: 100%; /* ให้เต็มช่อง */
+    max-width: 400px; /* ขนาดสูงสุด */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* ไม่รวมขอบในการคำนวณขนาด */
+    margin-bottom: 15px; /* เพิ่มระยะห่างใต้ช่องกรอก */
+    border-radius: 4px; /* เพิ่มมุมมนให้กับช่องกรอก */
+}
+
+/* สไตล์เฉพาะสำหรับช่องค้นหา */
+.search-input {
+    margin: 20px auto; /* จัดกึ่งกลางและเพิ่มระยะห่าง */
+    display: block; /* ทำให้สามารถใช้ margin: auto ได้ */
+    max-width: 300px; /* ปรับขนาดให้เหมาะสมกับช่องค้นหา */
+}
+
+
+/* ปรับปุ่ม Register */
+.visitor-register-form button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 200px; /* ขนาดปุ่ม */
+    align-self: center; /* จัดตำแหน่งปุ่มให้ตรงกลาง */
+    border-radius: 4px; /* เพิ่มมุมมนให้กับปุ่ม */
+    transition: background-color 0.3s ease; /* เพิ่ม transition */
+}
+
+.visitor-register-form button:hover {
+    background-color: #2980b9;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    background-color: #e74c3c; /* สีแดง */
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* ทำให้เปลี่ยนสีลื่นขึ้น */
+}
+
+.delete-button:hover {
+    background-color: #c0392b; /* สีแดงเข้มขึ้นเมื่อ hover */
+}
+
+/* ตารางผู้เยี่ยมชม */
+.visitor-register-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.visitor-register-table th,
+.visitor-register-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    /* border-radius: 4px;  ลบออก เพราะอาจทำให้ขอบตารางดูไม่เรียบ */
+}
+
+/* ส่วน QR Code */
+.visitor-register-qr-code {
+    margin-top: 20px;
+    text-align: center;
+}
+/* CSS สำหรับ Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%; /* ปรับความกว้างให้ยืดหยุ่นมากขึ้น */
+    max-width: 450px; /* จำกัดความกว้างสูงสุด */
+    text-align: center;
+    position: relative; /* สำหรับตำแหน่งของปุ่มปิด */
+}
+
+.modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; /* กระจายปุ่มให้ห่างกัน */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+}
+
+.modal-footer button {
+    padding: 10px 20px; /* เพิ่ม padding ให้ปุ่ม */
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* ทำให้ปุ่มขยายเต็มพื้นที่ที่มี */
+    max-width: 150px; /* จำกัดความกว้างสูงสุดของปุ่ม */
+    transition: background-color 0.3s ease; /* เพิ่ม transition */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; /* ให้อยู่เหนือ Modal Content */
+}
+.close-button:hover {
+    color: #f00; 
+}
+
+.modal-footer button:hover {
+    background-color: #0056b3;
+}
+
+/* ปรับสไตล์ของใบอนุญาต */
+.visitor-register-permit {
+    font-family: Arial, sans-serif;
+    text-align: left; /* เปลี่ยนเป็น left เพื่อให้อ่านง่ายขึ้น */
+    padding: 10px;
+    border: 1px solid #eee; /* เปลี่ยนสีขอบให้อ่อนลง */
+    box-sizing: border-box;
+    background-color: #fcfcfc; /* เพิ่มพื้นหลังเล็กน้อย */
+    margin-bottom: 15px; /* เพิ่มระยะห่างจาก footer */
+    text-align: center;
+}
+
+.visitor-register-permit h3 {
+    text-align: center; /* ให้หัวข้ออยู่กึ่งกลาง */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.visitor-register-permit p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    color: #444;
+}
+
+.visitor-register-permit p strong {
+    color: #222; /* ทำให้ตัวหนาเข้มขึ้น */
+}
+
+.visitor-register-qr-code {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* สไตล์สำหรับ pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-register {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination-register li {
+    margin: 0 5px;
+}
+
+.pagination-register li a {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-register li a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination-register .active-register a {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.pagination-register .disabled a {
+    color: #fff;
+    cursor: not-allowed;
+}
